@@ -1,1 +1,1 @@
-export interface Addon {}
+export interface AddonConfig {}
