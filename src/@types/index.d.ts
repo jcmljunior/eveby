@@ -8,6 +8,8 @@ import { EvebyConfig } from './core/eveby';
 import { GuardManagerConfig } from './core/guard-manager';
 import { SentinelaManagerConfig } from './core/sentinela-manager';
 import { StorageManagerConfig } from './core/storage-manager';
+import { RequestManagerConfig } from './core/request-manager';
+import { ResponseManagerConfig } from './core/response-manager';
 
 export {
   AddonConfig,
@@ -20,4 +22,6 @@ export {
   GuardManagerConfig,
   SentinelaManagerConfig,
   StorageManagerConfig,
+  RequestManagerConfig,
+  ResponseManagerConfig,
 };
