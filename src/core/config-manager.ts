@@ -1,10 +1,11 @@
 import { Collection } from 'discord.js';
+import { ConfigManagerConfig } from '../@types/core/config-manager';
 import _config from '../config';
 
 /**
  * Responsavel pela administração das configurações do projeto.
  */
-export default class ConfigManager {
+export default class ConfigManager implements ConfigManagerConfig {
   private config: Collection<any, any>;
 
   constructor() {
@@ -12,7 +13,7 @@ export default class ConfigManager {
     this.register(_config);
   }
 
-  register(options: any): any {
+  private register(options: any): void {
     for (const key in options) {
       if (typeof options[key] === 'object') {
         /**
