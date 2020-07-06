@@ -13,7 +13,7 @@ export default class ConfigManager implements ConfigManagerConfig {
     this.register(_config);
   }
 
-  private register(options: any): void {
+  register(options: any): void {
     for (const key in options) {
       if (typeof options[key] === 'object') {
         /**
