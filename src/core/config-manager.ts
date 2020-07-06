@@ -1,5 +1,5 @@
 import { Collection } from 'discord.js';
-import { ConfigManagerConfig } from '../@types/core/config-manager';
+import { ConfigManagerConfig } from '../@types';
 import _config from '../config';
 
 /**

@@ -1,4 +1,4 @@
-import { EvebyConfig } from '../@types/index';
+import { EvebyConfig } from '../@types';
 import ConfigManager from './config-manager';
 import StorageManager from './storage-manager';
 import BootletsManager from './bootlets-manager';
