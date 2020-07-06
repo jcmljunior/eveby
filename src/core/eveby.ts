@@ -9,12 +9,15 @@ export default class Eveby implements EvebyConfig {
   config: ConfigManager;
   storage: StorageManager;
 
+  bootlets: any;
+  addons: any;
+
   constructor() {
     this.config = new ConfigManager();
     this.storage = new StorageManager(this.config, {});
   }
 
-  load(): any {}
+  async load(): Promise<any> {}
 
-  run(): any {}
+  async run(): Promise<any> {}
 }
