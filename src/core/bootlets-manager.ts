@@ -1,5 +1,5 @@
-import StorageManager from './storage-manager';
 import { Collection } from 'discord.js';
+import StorageManager from './storage-manager';
 
 /**
  * Responsavel pelo carregamento dos eventos.
