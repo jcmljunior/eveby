@@ -1,4 +1,4 @@
-import { Client } from 'discord.js';
+import { Client, ClientOptions, Collection } from 'discord.js';
 import ConfigManager from './config-manager';
 
 /**
@@ -6,10 +6,24 @@ import ConfigManager from './config-manager';
  * Client Eveby
  */
 export default class StorageManager extends Client {
-  config: ConfigManager;
+  storage: Collection<any, any>;
 
-  constructor(config: ConfigManager, options: any) {
+  constructor(config: ConfigManager, options: ClientOptions) {
     super(options);
-    this.config = config;
+
+    this.storage = new Collection();
+    this.storage.set('config', config);
+  }
+
+  has(key: string): boolean {
+    return this.storage.has(key);
+  }
+
+  set(key: string, val: any): void {
+    this.storage.set(key, val);
+  }
+
+  get(key: string): any {
+    return this.storage.get(key);
   }
 }
